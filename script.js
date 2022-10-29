@@ -1,6 +1,6 @@
 var light=document.getElementById('light');
 var ul=document.querySelector('ul');
-var list=document.querySelectorAll('li');
+var list=document.querySelectorAll('.sort li');
 var sun=document.getElementById('sun');
 var text=document.getElementById("text");
 var but=document.querySelector("button");
@@ -38,7 +38,7 @@ function moon(){
 }
 
 
-text.addEventListener("blur",function(e){
+but.addEventListener("click",function(e){
     e.preventDefault();
     // create elements
     var li=document.createElement('li');
@@ -86,10 +86,41 @@ text.addEventListener("blur",function(e){
 
           })
         //   draging elements
+        var dragged=null;
+        
         function dragStart(){
+          
+            dragged=event.target;
+            console.log("dragging")
+        }
+        function dragOver() {
+            event.preventDefault();
             
-            var holditem;
-            holditem=event.target;
-            console.log(holditem)
+        }
+        function Drop(){
+            event.preventDefault();
+            
+            if(event.target!=dragged){
+                console.log(event.target);
+                let allitems = document.querySelectorAll(".sort li");
+                let draggedpos= 0 ;
+                let droppedpos = 0;
+                for(let x = 0; x<allitems.length; x++){
+                    if(dragged == allitems[x]){ draggedpos = x;}
+                    if(event.target == allitems[x]){ droppedpos = x;}
+                    
+                }
+                if(draggedpos < droppedpos ){
+                    event.target.parentNode.insertBefore(dragged,event.target.nextSibling)
+
+                }
+                else{
+                    event.target.parentNode.insertBefore(dragged,event.target)
+                }
+                
+                
+            }
+
+
         }
  
