@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+      <!-- light background -->
+      <div id="light">
+        <div id="lightback">
+        <h1>TODO</h1>
+        <img id="sun" onclick="moon()" style="float: right; cursor: pointer;" src="/images/icon-moon.svg" alt=""><br><br>
+
+        <form id="textback">
+          <label class="container">
+           
+            <input type="checkbox" >
+            <span class="checkmark"></span>
+            <input type="text" id="text" placeholder="Create a new Todo" >
+            <button></button>
+           
+          
+        </label>
+         
+          </form><br><br>
+          <div id="shadow">   
+            <ul>
+                <li draggable="true" ondragstart="dragStart()">
+                    <label class="container">
+                        <input type="checkbox" class="check" >
+                        <span class="checkmark" ></span> 
+                    </label>
+                    <span class="p"> complete online javascipt course </span>
+                    <img class="cross" src="/images/icon-cross.svg" alt="">
+                </li>
+                <li draggable="true" ondragstart="dragStart()">
+                  <label class="container">
+                      <input type="checkbox" class="check" >
+                      <span class="checkmark" ></span> 
+                  </label>
+                  <span class="p"> complete online javascipt course </span>
+                  <img class="cross" src="/images/icon-cross.svg" alt="">
+              </li>
+              
+                
+
+                
+
+               
+              </ul>
+              <div id="foot">
+                <span>5 items left</span>
+                <span id="midfoot">
+                  <span class="midfooteach">All</span>
+                  <span  class="midfooteach">Active</span>
+                  <span  class="midfooteach">Completed</span>
+                </span>
+                <span id="clear">clear completed</span>
+              </div>
+            </div> 
+              <div id="afterfoot">
+                <p>Drag and drop to reorder list</p>
+              </div>
+              
+
+      </div>
+    </div>
+
+
+
+    
+  
+
+    
+     
+
+      
+        
+
+    </main>
+    
+</body>
+<script src="/script.js"></script>
+</html>
