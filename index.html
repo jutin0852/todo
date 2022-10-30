@@ -18,26 +18,27 @@
         <form id="textback">
           <label class="container">
            
-            <input type="checkbox" >
+            <input type="checkbox" class="check" checked="checked">
             <span class="checkmark"></span>
-            <input type="text" id="text" placeholder="Create a new Todo" >
-            <button></button>
+           
+            
            
           
         </label>
+        <input type="text" id="text" placeholder="Create a new Todo and uncheck" >
          
           </form><br><br>
           <div id="shadow">   
             <ul ondragover="dragOver()" ondrop="Drop()" class="sort">
-                <li draggable="true" ondragstart="dragStart()">
+                <li draggable="true" ondragstart="dragStart()" class="lm ml">
                     <label class="container">
                         <input type="checkbox" class="check" >
                         <span class="checkmark" ></span> 
                     </label>
-                    <span class="p"> complete online rubish </span>
+                    <span class="p" > complete online rubish </span>
                     <img class="cross" src="/images/icon-cross.svg" alt="">
                 </li>
-                <li draggable="true" ondragstart="dragStart()">
+                <li draggable="true" ondragstart="dragStart()" class="lm ml">
                   <label class="container">
                       <input type="checkbox" class="check" >
                       <span class="checkmark" ></span> 
@@ -45,7 +46,7 @@
                   <span class="p"> complete </span>
                   <img class="cross" src="/images/icon-cross.svg" alt="">
               </li>
-              <li draggable="true" ondragstart="dragStart()">
+              <li draggable="true" ondragstart="dragStart()" class="lm ml">
                 <label class="container">
                     <input type="checkbox" class="check" >
                     <span class="checkmark" ></span> 
@@ -53,7 +54,7 @@
                 <span class="p"> complete online course  </span>
                 <img class="cross" src="/images/icon-cross.svg" alt="">
             </li>
-            <li draggable="true" ondragstart="dragStart()">
+            <li draggable="true" ondragstart="dragStart()" class="lm ml">
               <label class="container">
                   <input type="checkbox" class="check" >
                   <span class="checkmark" ></span> 
@@ -67,11 +68,11 @@
                
               </ul>
               <div id="foot">
-                <span>5 items left</span>
+                <span id="itemnum">0 items left</span>
                 <span id="midfoot">
-                  <span class="midfooteach">All</span>
-                  <span  class="midfooteach">Active</span>
-                  <span  class="midfooteach">Completed</span>
+                  <span id="all" class="midfooteach">All</span>
+                  <span id="active"  class="midfooteach">Active</span>
+                  <span id="complete"  class="midfooteach">Completed</span>
                 </span>
                 <span id="clear">clear completed</span>
               </div>
