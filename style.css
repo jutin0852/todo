@@ -15,7 +15,7 @@
     background-size: 100% 35% ;
     display: flex;
     justify-content: center;
-    height: 600px;
+    height: 700px;
     /* display: none; */
     overflow: hidden;
   
@@ -36,12 +36,13 @@
      
   }
   #text{
-     width: 200px;
+     width: 250px;
      padding: 18px;
      border-radius: 5px;
      outline: none;
      border: none;
      margin-left: 30px;
+     font-size: 17px;
       
   }
   
@@ -234,6 +235,7 @@
        outline: none;
        border: none;
        margin-left: 30px;
+       font-size: 17px;
         
     }
     
