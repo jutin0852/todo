@@ -84,7 +84,7 @@ form.addEventListener('click',function(e){
     li.setAttribute("draggable","true");
     li.setAttribute("ondragstart","dragStart()")
     li.setAttribute("class","lm")
-    li.setAttribute("class","ml")
+    // li.setAttribute("class","ml")
     // add class
     img.classList.add("cross");
     label.classList.add('container');
@@ -113,7 +113,18 @@ ul.addEventListener("click",function(e){
         //delete btn
         if(e.target.className=="cross"){
            var taskList= e.target.parentElement;
-           ul.removeChild(taskList); }
+           ul.removeChild(taskList);
+
+           var num=document.querySelectorAll(".lm");
+           var itemnum=document.getElementById('itemnum');
+           if(num.length<=1){
+               itemnum.innerHTML=num.length+ " item left";
+           }
+           else{   
+           itemnum.innerHTML=num.length+ " items left";
+           }
+        
+        }
            
            //strike through when ticked
         if(e.target.className=="check"){
@@ -121,7 +132,7 @@ ul.addEventListener("click",function(e){
                 e.target.parentElement.nextElementSibling.classList.add('line');
 
                 //items left 
-                items.forEach(function(item){
+                items.forEach(function(){
                     e.target.parentElement.parentNode.classList.remove("lm")
                 })
                 var num=document.querySelectorAll(".lm");

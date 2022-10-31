@@ -25,17 +25,21 @@
            
           
         </label>
-        <input type="text" id="text" placeholder="Create a new Todo and uncheck" >
+        <input type="text" id="text" placeholder="Type Task name before unchecking button" >
          
           </form><br><br>
           <div id="shadow">   
             <ul ondragstart="dragOver()" ondrop="Drop()" class="sort">
-                
+              <li draggable="true" ondragstart="dragStart()" class="lm">
+                <label class="container"><input type="checkbox" class="check">
+                  <span class="checkmark"></span>
+                </label><span class="p">create more task</span> 
+                <img src="/images/icon-cross.svg" class="cross"></li>
 
                
               </ul>
               <div id="foot">
-                <span id="itemnum">0 items left</span>
+                <span id="itemnum">1 items left</span>
                 <span id="midfoot">
                   <span id="all" class="midfooteach">All</span>
                   <span id="active"  class="midfooteach">Active</span>
