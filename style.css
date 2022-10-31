@@ -15,7 +15,7 @@
     background-size: 100% 35% ;
     display: flex;
     justify-content: center;
-    height: 665px;
+    height: 700px;
     /* display: none; */
     overflow: hidden;
   
@@ -205,6 +205,7 @@
   }
 @media screen and (min-width:650px) {
   
+  
     #light{
       background-image: url(/images/bg-desktop-light.jpg);
       background-color: white;
@@ -212,7 +213,7 @@
       background-size: 100% 40% ;
       display: flex;
       justify-content: center;
-      height: 650px;
+      height: 700px;
       overflow: hidden;
       /* display: none; */
     
