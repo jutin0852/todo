@@ -39,7 +39,7 @@
      
   }
   #text{
-     width: 250px;
+     width: 210px;
      padding: 18px;
      border-radius: 5px;
      outline: none;
@@ -117,6 +117,17 @@
      border-radius: 5px;
   
   
+  }
+  #but{
+    padding: 5px;
+    background-image: url(/images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+     background-position:center;
+     background-size: cover;
+     color: white;
+     border-radius: 5px;
+     cursor: pointer;
+     /* display: none; */
   }
   
   
@@ -240,7 +251,7 @@
        
     }
     #text{
-       width: 380px;
+       width: 340px;
        padding: 18px;
        border-radius: 5px;
        outline: none;
@@ -316,6 +327,18 @@
     
     
     }
+    #but{
+      padding: 5px;
+      background-image: url(/images/bg-desktop-light.jpg);
+      background-repeat: no-repeat;
+       background-position:center;
+       background-size: cover;
+       color: white;
+       border-radius: 5px;
+       cursor: pointer;
+       /* display: none; */
+    }
+    
     
     
     
@@ -439,7 +462,7 @@
        
     }
     #text{
-       width: 380px;
+       width: 350px;
        padding: 18px;
        border-radius: 5px;
        outline: none;
@@ -515,6 +538,18 @@
     
     
     }
+    #but{
+      padding: 5px;
+      background-image: url(/images/bg-desktop-light.jpg);
+      background-repeat: no-repeat;
+       background-position:center;
+       background-size: cover;
+       color: white;
+       border-radius: 5px;
+       cursor: pointer;
+       /* display: none; */
+    }
+    
     
     
     

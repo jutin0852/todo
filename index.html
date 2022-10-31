@@ -18,25 +18,26 @@
         <form id="textback">
           <label class="container">
            
-            <input type="checkbox" class="check" checked="checked">
+            <input type="checkbox" class="check">
             <span class="checkmark"></span>
            
             
            
           
         </label>
-        <input type="text" id="text" placeholder="check to add , uncheck to clear" >
+        <input type="text" id="text" placeholder="add task" >
+        <button id="but">Add</button>
          
           </form><br><br>
           <div id="shadow">   
-            <ul ondragstart="dragOver()" ondrop="Drop()" class="sort">
+            <ul ondragover="dragOver()" ondrop="Drop()" class="sort">
               <li draggable="true" ondragstart="dragStart()" class="lm">
                 <label class="container"><input type="checkbox" class="check">
                   <span class="checkmark"></span>
-                </label><span class="p">create more task</span> 
+                </label><span class="p">play football</span> 
                 <img src="/images/icon-cross.svg" class="cross"></li>
 
-               
+            
               </ul>
               <div id="foot">
                 <span id="itemnum">1 items left</span>
@@ -56,16 +57,6 @@
       </div>
     </div>
 
-
-
-    
-  
-
-    
-     
-
-      
-        
 
     </main>
     

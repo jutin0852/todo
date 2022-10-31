@@ -47,63 +47,55 @@ function moon(){
    
 }
 
-form.addEventListener('click',function(e){
-    if(e.target.className=="check"){
-        if(e.target.checked && !text.value==""){
-            add();
+but.addEventListener("click",function(e){
+    e.preventDefault();
+    if(!text.value==""){
+        // e.preventDefault();
+        // create elements
+        var li=document.createElement('li');
+        var label=document.createElement('label');
+        var span=document.createElement('span');
+        var task=document.createElement('span');
+        var img=document.createElement('img');
+        var input=document.createElement('input')
+        // appending child to parents
+        ul.appendChild(li);
+        li.appendChild(label);
+        label.appendChild(input);
+        label.appendChild(span);
+        li.appendChild(task);
+        li.appendChild(img);
+        // add attributes
+        input.setAttribute("type","checkbox");
+        input.setAttribute("class","check");
+        img.setAttribute("src","/images/icon-cross.svg");
+        ul.setAttribute("ondragover","dragOver()");
+        ul.setAttribute("ondrop","Drop()");
+        li.setAttribute("draggable","true");
+        li.setAttribute("ondragstart","dragStart()")
+        li.setAttribute("class","lm")
+        // li.setAttribute("class","ml")
+        // add class
+        img.classList.add("cross");
+        label.classList.add('container');
+        span.classList.add('checkmark');
+        task.classList.add('p');
+        task.textContent=text.value;
+    
+        //item mumber
+        var num=document.querySelectorAll(".lm");
+        var itemnum=document.getElementById('itemnum');
+        if(num.length<=1){
+            itemnum.innerHTML=num.length+ " item left";
         }
-        else{
-            text.value=""
+        else{   
+        itemnum.innerHTML=num.length+ " items left";
         }
-    }
-})
-
-
- function add(){
-    // e.preventDefault();
-    // create elements
-    var li=document.createElement('li');
-    var label=document.createElement('label');
-    var span=document.createElement('span');
-    var task=document.createElement('span');
-    var img=document.createElement('img');
-    var input=document.createElement('input')
-    // appending child to parents
-    ul.appendChild(li);
-    li.appendChild(label);
-    label.appendChild(input);
-    label.appendChild(span);
-    li.appendChild(task);
-    li.appendChild(img);
-    // add attributes
-    input.setAttribute("type","checkbox");
-    input.setAttribute("class","check");
-    img.setAttribute("src","/images/icon-cross.svg");
-    ul.setAttribute("ondragover","dragOver()");
-    ul.setAttribute("ondrop","Drop()");
-    li.setAttribute("draggable","true");
-    li.setAttribute("ondragstart","dragStart()")
-    li.setAttribute("class","lm")
-    // li.setAttribute("class","ml")
-    // add class
-    img.classList.add("cross");
-    label.classList.add('container');
-    span.classList.add('checkmark');
-    task.classList.add('p');
-    task.textContent=text.value;
-
-    //item mumber
-    var num=document.querySelectorAll(".lm");
-    var itemnum=document.getElementById('itemnum');
-    if(num.length<=1){
-        itemnum.innerHTML=num.length+ " item left";
-    }
-    else{   
-    itemnum.innerHTML=num.length+ " items left";
     }
     
-    }
 
+})
+ 
     var list=document.querySelectorAll('.sort li');
     var items=document.querySelectorAll('.lm');
     // added event listener to the ul
@@ -174,6 +166,7 @@ function dragStart(){
           
             dragged=event.target;
            
+           
         }
  function dragOver() {
             event.preventDefault();
@@ -181,6 +174,7 @@ function dragStart(){
         }
  function Drop(){
             event.preventDefault();
+            
             
             if(event.target.hasAttribute("draggable")){
                 
