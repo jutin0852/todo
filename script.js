@@ -49,7 +49,7 @@ function moon(){
 
 form.addEventListener('click',function(e){
     if(e.target.className=="check"){
-        if(!e.target.checked && !text.value==""){
+        if(e.target.checked && !text.value==""){
             add();
         }
         else{
