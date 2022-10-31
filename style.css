@@ -89,7 +89,7 @@
    float: right;
    height: 0.9em;
    cursor: pointer;
-   display: block;
+   /* visibility: initial; */
   }
   .midfooteach:hover{
    color:hsl(235, 19%, 35%) ;
@@ -199,7 +199,7 @@
   
     
   }
-  @media screen and (min-width:650px) {
+@media screen and (min-width:650px) {
   
     #light{
       background-image: url(/images/bg-desktop-light.jpg);
@@ -208,7 +208,7 @@
       background-size: 100% 40% ;
       display: flex;
       justify-content: center;
-      height: 745px;
+      height: 650px;
       /* display: none; */
     
     }
@@ -281,7 +281,7 @@
      float: right;
      height: 0.9em;
      cursor: pointer;
-     display: none;
+     /* visibility: hidden; */
     }
     .midfooteach:hover{
      color:hsl(235, 19%, 35%) ;
@@ -393,7 +393,7 @@
     }
     
 
-  @media screen and (min-width:980px) {
+@media screen and (min-width:980px) {
   
     #light{
       background-image: url(/images/bg-desktop-light.jpg);
@@ -428,6 +428,7 @@
        outline: none;
        border: none;
        margin-left: 30px;
+       font-size: 17px;
         
     }
     
@@ -475,7 +476,7 @@
      float: right;
      height: 0.9em;
      cursor: pointer;
-     display: none;
+     /* visibility: hidden; */
     }
     .midfooteach:hover{
      color:hsl(235, 19%, 35%) ;

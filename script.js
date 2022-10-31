@@ -244,16 +244,16 @@ foot.addEventListener('click',function(e){
            }
         })
         
-        ul.addEventListener('mouseover',function(e){
-            if(e.target.classList.contains('ml')){
-                e.target.children[2].style.display='block'
-            }
-        })
-     ul.addEventListener('mouseout',function(e){
-        if(e.target.classList.contains('ml')){
-            e.target.children[2].style.display='none'
-        }
-     })
+    //     ul.addEventListener('mouseover',function(e){
+    //         if(e.target.classList.contains('ml') || e.target.className=="cross"){
+    //             e.target.children[2].style.visibility='initial'
+    //         }
+    //     })
+    //  ul.addEventListener('mouseout',function(e){
+    //     if(e.target.classList.contains('ml') || e.target.className=="cross"){
+    //         e.target.children[2].style.visibility='hidden'
+    //     }
+    //  })
 
 
         
