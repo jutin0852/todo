@@ -7,7 +7,10 @@
 
 
 @media screen and (min-width:300px) {
-  
+  body{
+    overflow: hidden;
+
+  }
   #light{
     background-image: url(/images/bg-desktop-light.jpg);
     background-color: white;
@@ -17,7 +20,7 @@
     justify-content: center;
     height: 700px;
     /* display: none; */
-    overflow: hidden;
+    
   
   }
   
@@ -204,8 +207,11 @@
     
   }
 @media screen and (min-width:650px) {
-  
-  
+
+  body{
+    overflow: hidden;
+
+  }
     #light{
       background-image: url(/images/bg-desktop-light.jpg);
       background-color: white;
@@ -214,7 +220,7 @@
       display: flex;
       justify-content: center;
       height: 700px;
-      overflow: hidden;
+      
       /* display: none; */
     
     }
@@ -401,8 +407,12 @@
     
 
 @media screen and (min-width:980px) {
-  
+  body{
+    overflow: hidden;
+
+  }
     #light{
+
       background-image: url(/images/bg-desktop-light.jpg);
       background-color: white;
       background-repeat: no-repeat;
@@ -410,7 +420,7 @@
       display: flex;
       justify-content: center;
       height: 745px;
-      /* display: none; */overflow: hidden;
+      
     
     }
     
