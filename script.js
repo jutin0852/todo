@@ -24,8 +24,7 @@ function moon(){
     text.style.background="hsl(235, 24%, 19%)";
     text.style.color="hsl(234, 39%, 85%)";
     
-    sun.src="/images/icon-sun.svg";
-   
+    
 
     }
     else{
@@ -41,6 +40,7 @@ function moon(){
         sun.src="/images/icon-moon.svg";
 
     }
+    
     
     
 
