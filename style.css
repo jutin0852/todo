@@ -8,7 +8,7 @@
 
 @media screen and (min-width:300px) {
   body{
-    overflow: hidden;
+    /* overflow: hidden; */
 
   }
   #light{
@@ -220,7 +220,7 @@
 @media screen and (min-width:650px) {
 
   body{
-    overflow: hidden;
+    /* overflow: hidden; */
 
   }
     #light{
@@ -431,7 +431,7 @@
 
 @media screen and (min-width:980px) {
   body{
-    overflow: hidden;
+    /* overflow: hidden; */
 
   }
     #light{

@@ -7,10 +7,10 @@ var but=document.querySelector("button");
 var check=document.querySelectorAll('.check');
 var foot=document.getElementById('foot');
 var form=document.forms['textback']
-
 var shadow=document.getElementById('shadow');
+var keep=[];
 
-
+var data='[]'
 
 // dark mode
 function moon(){
@@ -25,7 +25,7 @@ function moon(){
     text.style.color="hsl(234, 39%, 85%)";
     
     sun.src="/images/icon-sun.svg";
-    
+   
 
     }
     else{
@@ -45,6 +45,20 @@ function moon(){
     
 
    
+}
+form.addEventListener('click',function(e){
+    if(e.target.className=="check"){
+        text.value=""
+    }
+})
+if(localStorage.getItem('save')){
+    console.log(localStorage.getItem('save'))
+    ul.innerHTML=localStorage.getItem('save')
+}
+if( localStorage.getItem('jet')){
+    console.log(localStorage.getItem('jet'))
+    itemnum.innerHTML=localStorage.getItem('jet')
+
 }
 
 but.addEventListener("click",function(e){
@@ -81,6 +95,13 @@ but.addEventListener("click",function(e){
         span.classList.add('checkmark');
         task.classList.add('p');
         task.textContent=text.value;
+
+
+       localStorage.setItem('save',ul.innerHTML);
+
+    //    localStorage.removeItem('save')
+    
+
     
         //item mumber
         var num=document.querySelectorAll(".lm");
@@ -91,6 +112,8 @@ but.addEventListener("click",function(e){
         else{   
         itemnum.innerHTML=num.length+ " items left";
         }
+        localStorage.setItem('jet',itemnum.innerHTML);
+
     }
     
 
@@ -106,6 +129,7 @@ ul.addEventListener("click",function(e){
         if(e.target.className=="cross"){
            var taskList= e.target.parentElement;
            ul.removeChild(taskList);
+           localStorage.setItem('save',ul.innerHTML);
 
            var num=document.querySelectorAll(".lm");
            var itemnum=document.getElementById('itemnum');
@@ -115,6 +139,8 @@ ul.addEventListener("click",function(e){
            else{   
            itemnum.innerHTML=num.length+ " items left";
            }
+           localStorage.setItem('jet',itemnum.innerHTML)
+
         
         }
            
@@ -124,10 +150,11 @@ ul.addEventListener("click",function(e){
                 e.target.parentElement.nextElementSibling.classList.add('line');
 
                 //items left 
-                items.forEach(function(){
+                
                     e.target.parentElement.parentNode.classList.remove("lm")
-                })
+                
                 var num=document.querySelectorAll(".lm");
+                console.log(num.length)
                 var itemnum=document.getElementById('itemnum');
                 if(num.length<=1){
                     itemnum.innerHTML=num.length+ " item left";
@@ -144,9 +171,9 @@ ul.addEventListener("click",function(e){
                 e.target.parentElement.nextElementSibling.classList.remove('line');
 
                   //items left 
-                  items.forEach(function(item){
+                  
                     e.target.parentElement.parentNode.classList.add("lm")
-                })
+                
                 var num=document.querySelectorAll(".lm");
                 var itemnum=document.getElementById('itemnum');
                 if(num.length<=1){
@@ -156,8 +183,10 @@ ul.addEventListener("click",function(e){
                 itemnum.innerHTML=num.length+ " items left";
                 }
             }
+            localStorage.setItem('jet',itemnum.innerHTML)
+            localStorage.setItem('save',ul.innerHTML);
             } 
-
+            
           })
         //   draging elements
         var dragged=null;
@@ -244,9 +273,12 @@ foot.addEventListener('click',function(e){
             ps.forEach(function(p){
             if(p.className=="p line"){
                 ul.removeChild(p.parentElement)
+                localStorage.setItem('save',ul.innerHTML);
                     }
            })
            }
+           
+
         })
         
     //     ul.addEventListener('mouseover',function(e){
