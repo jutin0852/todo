@@ -95,6 +95,7 @@ but.addEventListener("click",function(e){
         span.classList.add('checkmark');
         task.classList.add('p');
         task.textContent=text.value;
+        text.value=""
 
 
        localStorage.setItem('save',ul.innerHTML);
